@@ -1,4 +1,6 @@
+from django.http import Http404
 from django.shortcuts import render, HttpResponse
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view, permission_classes
@@ -50,10 +52,20 @@ def delete_device(request, qr):
     return Response("Device was deleted!")
 
 
+def get_object(self, pk):
+    try:
+        return Device.objects.get(pk=pk)
+    except Device.DoesNotExist:
+        raise Http404
+
+
 @api_view(['GET'],)
 @permission_classes([AllowAny],)
 def get_device(request, qr):
-    return Response(DeviceSerializer(Device.objects.get(qrText=qr), many=False).data)
+    try:
+        return Response(DeviceSerializer(Device.objects.get(qrText=qr), many=False).data)
+    except Device.DoesNotExist:
+        raise Http404
 
 
 @api_view(['GET'],)

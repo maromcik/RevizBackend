@@ -12,13 +12,25 @@ from django.contrib import messages
 
 
 # Register your models here.
+class DeviceAdmin(admin.ModelAdmin):
+    # field options
+    list_display = ['deviceName', 'qrText', 'facility']
+    list_filter = ['deviceName', 'facility']
+    search_fields = ['deviceName', 'facility__facilityName']
+
+
+class FacilityAdmin(admin.ModelAdmin):
+    # field options
+    list_display = ['facilityName', 'facilityLocation']
+    list_filter = ['facilityName', 'facilityLocation']
+    search_fields = ['facilityName', 'facilityLocation']
 
 # registers all the models
 # admin.site.unregister(User)
 # admin.site.register(User, UserAdmin)
 # admin.site.register(Person, PersonAdmin)
 # admin.site.register(Log, LogAdmin)
-admin.site.register(Facility)
-admin.site.register(Device)
+admin.site.register(Facility, FacilityAdmin)
+admin.site.register(Device, DeviceAdmin)
 # admin.site.register(SubscriptionInfo)
 admin.site.site_header = "Reviz Administration"

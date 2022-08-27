@@ -6,6 +6,8 @@ from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view, permission_classes
 from .models import *
 from .serializers import *
+from .exceptions.CreateDeviceException import *
+from .exceptions.UpdateDeviceException import *
 
 @api_view(['GET'],)
 @permission_classes([AllowAny],)
@@ -24,8 +26,14 @@ def get_devices_by_facility(request, facility_name):
 @api_view(['PUT'],)
 @permission_classes([AllowAny],)
 def update_device(request, qr):
+    if not device_exists(qr):
+        raise UpdateDeviceNotExistsException()
     device = Device.objects.get(qrText=qr)
-    serializer = DeviceSerializer(device, data=request.data)
+    data = request.data
+    if device_exists(data['qrText']):
+        raise UpdateDeviceDuplicitQRException()
+
+    serializer = DeviceSerializer(device, data=data)
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
@@ -35,6 +43,11 @@ def update_device(request, qr):
 @permission_classes([AllowAny],)
 def create_device(request):
     data = request.data
+    if data['qrText'] == "":
+        raise CreateDeviceEmptyQRException()
+    if device_exists(data['qrText']):
+        raise CreateDeviceExistsException()
+
     device = Device.objects.create(
         facility=Facility.objects.get(pk=data['facility']),
         deviceName=data['deviceName'],
@@ -50,13 +63,6 @@ def delete_device(request, qr):
     device = Device.objects.get(qrText=qr)
     device.delete()
     return Response("Device was deleted!")
-
-
-def get_object(self, pk):
-    try:
-        return Device.objects.get(pk=pk)
-    except Device.DoesNotExist:
-        raise Http404
 
 
 @api_view(['GET'],)
@@ -78,3 +84,7 @@ def get_facilities(request):
 @permission_classes([AllowAny],)
 def get_facility_by_name(request, facility_name):
     return Response(FacilitySerializer(Facility.objects.get(facilityName=facility_name), many=False).data)
+
+
+def device_exists(qr):
+    return Device.objects.filter(qrText=qr).exists()

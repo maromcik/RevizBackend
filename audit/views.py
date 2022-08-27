@@ -30,7 +30,10 @@ def update_device(request, qr):
         raise UpdateDeviceNotExistsException()
     device = Device.objects.get(qrText=qr)
     data = request.data
-    if device_exists(data['qrText'] and qr != data['qrText']):
+    print(data['qrText'])
+    print(qr)
+    if device_exists(data['qrText']) and (qr != data['qrText']):
+        print("pici")
         raise UpdateDeviceDuplicitQRException()
 
     serializer = DeviceSerializer(device, data=data)

@@ -9,7 +9,6 @@ from .serializers import *
 from .exceptions.CreateDeviceException import *
 from .exceptions.UpdateDeviceException import *
 
-# working backend
 
 @api_view(['GET'],)
 @permission_classes([AllowAny],)

@@ -93,7 +93,7 @@ DATABASES = {
         'NAME': "Reviz",
         'USER': 'django',
         'PASSWORD': 'M22ercedes!',
-        'HOST': '192.168.1.12',
+        'HOST': '127.0.0.1',
         'PORT': ''
     }
 }

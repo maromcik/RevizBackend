@@ -12,4 +12,5 @@ RUN apt-get install -y apt-utils cmake git python3-pip python3-dev libpq-dev pos
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
+RUN python3 manage.py collectstatic
 COPY . .

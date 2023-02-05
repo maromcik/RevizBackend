@@ -100,7 +100,7 @@ DATABASES = {
         'NAME': "revizserver",
         'USER': os.environ.get("POSTGRES_USER", default='postgres'),
         'PASSWORD': os.environ.get("POSTGRES_PASSWORD", default='postgres'),
-        'HOST': os.environ.get("POSTGRES_HOST", default='192.168.1.15'),
+        'HOST': os.environ.get("POSTGRES_HOST", default='192.168.1.10'),
         'PORT': 5432
     }
 }

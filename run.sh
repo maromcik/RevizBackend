@@ -27,7 +27,7 @@ if [ "$superuser" = true ] ; then
 fi
 
 if [ "$up" = true ] ; then
-  docker-compose up
+  docker-compose up -d
 fi
 
 if [ "$down" = true ] ; then

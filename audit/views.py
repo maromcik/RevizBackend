@@ -12,7 +12,6 @@ from .exceptions.UpdateDeviceException import *
 
 # git works
 
-print("KOKOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOT")
 @api_view(['GET'],)
 @permission_classes([AllowAny],)
 def get_devices(request):

@@ -1,0 +1,9 @@
+Django
+psycopg2
+numpy
+gunicorn
+django_cleanup
+paramiko
+psutil
+apscheduler
+cryptography

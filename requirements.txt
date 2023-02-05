@@ -8,3 +8,4 @@ psutil
 apscheduler
 cryptography
 djangorestframework
+django-cors-headers

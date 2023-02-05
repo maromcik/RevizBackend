@@ -98,9 +98,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': "revizserver",
-        'USER': 'django',
-        'PASSWORD': 'django',
-        'HOST': '127.0.0.1',
+        'USER': os.environ.get("POSTGRES_USER", default='django'),
+        'PASSWORD': os.environ.get("POSTGRES_PASSWORD", default='django'),
+        'HOST': os.environ.get("POSTGRES_HOST", default='localhost'),
         'PORT': 5432
     }
 }

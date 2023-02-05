@@ -3,9 +3,9 @@ services:
   app:
     build: .
     container_name: revizserver
-    command: gunicorn --timeout 240 --workers 1 --bind 0.0.0.0:8000 FaceRecognitionServer.wsgi
+    command: gunicorn --timeout 240 --workers 1 --bind 0.0.0.0:8000 Reviz.wsgi
     volumes:
-      - .:/RevizServer
+      - .:/Reviz
     ports:
       - 5555:5555
     expose:

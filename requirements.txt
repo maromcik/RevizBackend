@@ -7,3 +7,4 @@ paramiko
 psutil
 apscheduler
 cryptography
+djangorestframework

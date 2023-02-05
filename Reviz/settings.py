@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,12 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i4-e*14op&l+(fw0x6kl2$47(r46sd_6-1kfa@(ls+3u$rf4yr'
+DEBUG = int(os.environ.get("DEBUG", default=1))
+# DEBUG = True
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default="*").split(" ")
+# ALLOWED_HOSTS = ['192.168.1.52']
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.52', '192.168.1.24', '192.168.1.12']
+SECRET_KEY = os.environ.get("SECRET_KEY", default='&21vr&audc=3&vg%b1nkc9!#66!c6-uu6mvdf51**eb2%x4!09')
+# SECRET_KEY = '&21vr&audc=3&vg%b1nkc9!#66!c6-uu6mvdf51**eb2%x4!09'
+
+# CSRF_TRUSTED_ORIGINS = ["http://localhost", "http://127.0.0.1"]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 
 # CORS_ORIGIN_WHITELIST = [
 #     'http://127.0.0.1:56694',
@@ -89,12 +96,12 @@ WSGI_APPLICATION = 'Reviz.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': "Reviz",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "revizserver",
         'USER': 'django',
-        'PASSWORD': 'M22ercedes!',
+        'PASSWORD': 'django',
         'HOST': '127.0.0.1',
-        'PORT': ''
+        'PORT': 5432
     }
 }
 

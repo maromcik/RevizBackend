@@ -9,3 +9,4 @@ apscheduler
 cryptography
 djangorestframework
 django-cors-headers
+djangorestframework-simplejwt

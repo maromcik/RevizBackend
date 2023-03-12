@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e6d2c0ad-f17c-4028-923a-005f99594b2a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Reviz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Reviz.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/migrations/0002_facility_alter_device_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/migrations/0003_device_qr_text_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/migrations/0004_rename_name_device_devicename_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2MsMCTiLG3kismC30WwYjkAr9Wd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="false">
+    <layout>
+      <window_info id="Commit_Guest" />
+      <window_info id="Space Code Reviews" order="0" />
+      <window_info id="Bookmarks" order="1" side_tool="true" />
+      <window_info id="Pull Requests" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.22558594" />
+      <window_info id="Commit" order="4" />
+      <window_info id="Learn" order="5" show_stripe_button="false" />
+      <window_info id="Structure" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Python Packages" order="1" />
+      <window_info anchor="bottom" id="File Transfer" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Python Console" order="4" />
+      <window_info anchor="bottom" id="Problems View" order="5" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.3294903" />
+      <window_info anchor="bottom" id="TypeScript" order="7" />
+      <window_info anchor="bottom" id="Services" order="8" />
+      <window_info anchor="bottom" id="Dependency Checker" order="9" />
+      <window_info anchor="right" id="Endpoints" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="Notifications" order="3" weight="0.25" />
+    </layout>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6d2c0ad-f17c-4028-923a-005f99594b2a" name="Changes" comment="" />
+      <created>1678551709778</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678551709778</updated>
+      <workItem from="1678551711459" duration="867000" />
+      <workItem from="1678571929447" duration="221000" />
+      <workItem from="1678572226856" duration="599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

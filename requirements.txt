@@ -10,3 +10,4 @@ cryptography
 djangorestframework
 django-cors-headers
 djangorestframework-simplejwt
+django_reverse_admin

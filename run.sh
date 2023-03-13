@@ -5,8 +5,9 @@ down=false
 up=false
 collect=false
 migrate=false
+restart=false
 
-while getopts ":bsducm" option; do
+while getopts ":bsducmr" option; do
   case $option in
     h) echo "usage: $0 [-h] [-b] [-s]"; exit ;;
     b) build=true ;;
@@ -15,6 +16,7 @@ while getopts ":bsducm" option; do
     u) up=true ;;
     c) collect=true ;;
     m) migrate=true ;;
+    r) restart=true ;;
     ?) echo "error: option -$OPTARG does not exist - specify -b if you want to build for the first time or -s if you want to create a superuser"; exit ;;
   esac
 done
@@ -37,7 +39,7 @@ if [ "$up" = true ] ; then
 fi
 
 if [ "$migrate" = true ] ; then
-  docker-compose up -d 
+  docker-compose up -d
   docker-compose run app python3 manage.py makemigrations audit
 	docker-compose run app python3 manage.py migrate
   docker-compose down 
@@ -47,4 +49,8 @@ if [ "$down" = true ] ; then
   docker-compose down
 fi
 
+if [ "$restart" = true ] ; then
+  docker-compose down
+  docker-compose up -d
+fi
 

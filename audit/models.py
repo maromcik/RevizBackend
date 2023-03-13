@@ -18,6 +18,20 @@ class Facility(models.Model):
         verbose_name_plural = "facilities"
 
 
+class Year(models.Model):
+    id = models.AutoField(primary_key=True)
+    year = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.year)
+
+    def __unicode__(self):
+        return str(self.year)
+
+    class Meta:
+        verbose_name_plural = "years"
+
+
 class Cord(models.Model):
     id = models.AutoField(primary_key=True)
     cord_type = models.CharField(max_length=255)
@@ -47,13 +61,19 @@ class Voltage(models.Model):
     class Meta:
         verbose_name_plural = "voltages"
 
+
 class DeviceTemplate(models.Model):
     TYPE_CHOICES = (
         ('Spotrebič', 'Spotrebič'),
         ('Predlžovačka', 'Predlžovačka')
     )
 
-    CLASS_CHOICES = (
+    CLASS = (
+        ('1', '1'),
+        ('2', '2')
+    )
+
+    USE_GROUP = (
         ('A', 'A'),
         ('B', 'B'),
         ('C', 'C'),
@@ -70,8 +90,9 @@ class DeviceTemplate(models.Model):
     id = models.AutoField(primary_key=True)
     device_type = models.CharField(max_length=127, choices=TYPE_CHOICES)
     device_name = models.CharField(max_length=255)
-    device_class = models.CharField(max_length=10, choices=CLASS_CHOICES)
-    device_operability = models.CharField(max_length=255, choices=OPERABILITY_CHOICES)
+    device_class = models.CharField(max_length=10, choices=CLASS)
+    use_group = models.CharField(max_length=10, choices=USE_GROUP)
+    device_operability = models.CharField(max_length=255, choices=OPERABILITY_CHOICES, default='prenosné')
 
     def __str__(self):
         return self.device_name
@@ -93,6 +114,7 @@ class Device(models.Model):
     device_voltage = models.ForeignKey(Voltage, on_delete=models.CASCADE)
     power = models.DecimalField(max_digits=16, decimal_places=4)
     current = models.DecimalField(max_digits=16, decimal_places=4)
+    year = models.ForeignKey(Year, on_delete=models.CASCADE, null=True, blank=True)
     qr_text = models.CharField(max_length=255)
 
     # display names

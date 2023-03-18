@@ -21,6 +21,14 @@ def get_devices(request):
 
 @api_view(['GET'],)
 @permission_classes([AllowAny],)
+def get_models(request):
+    device_models = DeviceModel.objects.all()
+    return Response(DeviceModelSerializer(reversed(device_models[max(len(device_models)-100, 0):]), many=True).data)
+
+
+
+@api_view(['GET'],)
+@permission_classes([AllowAny],)
 def get_devices_by_facility(request, facility_name):
     devices = Device.objects.filter(facility__facility_name=facility_name)
     return Response(DeviceSerializer(reversed(devices[max(len(devices)-100, 0):]), many=True).data)
@@ -52,7 +60,7 @@ def create_device(request):
         raise CreateDeviceExistsException()
     device = Device.objects.create(
         facility=Facility.objects.get(pk=data['facility']),
-        device_template=DeviceTemplate.objects.get(pk=data['device_template']),
+        device_template=DeviceModel.objects.get(pk=data['device_template']),
         device_SN=data['device_SN'],
         cord=Cord.objects.get(pk=data['cord']),
         device_voltage=Voltage.objects.get(pk=data['device_voltage']),

@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6d2c0ad-f17c-4028-923a-005f99594b2a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <window_info id="Space Code Reviews" order="0" />
       <window_info id="Bookmarks" order="1" side_tool="true" />
       <window_info id="Pull Requests" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.16699219" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.18261719" />
       <window_info id="Commit" order="4" />
       <window_info id="Learn" order="5" show_stripe_button="false" />
       <window_info id="Structure" order="6" side_tool="true" />
@@ -58,15 +58,43 @@
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Python Console" order="4" />
       <window_info anchor="bottom" id="Problems View" order="5" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.31007284" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.31007284" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="bottom" id="Services" order="8" />
-      <window_info anchor="bottom" id="Dependency Checker" order="9" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.2348301" />
+      <window_info anchor="bottom" id="Dependency Checker" order="10" />
       <window_info anchor="right" id="Endpoints" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="SciView" order="2" />
       <window_info anchor="right" id="Notifications" order="3" weight="0.25" />
     </layout>
+  </component>
+  <component name="RunManager">
+    <configuration name="Reviz" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Reviz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Reviz.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="SDK_NAME" value="Python 3.10 (RevizBackend)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="192.168.1.34" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,10 +109,26 @@
       <workItem from="1678572226856" duration="599000" />
       <workItem from="1678638052925" duration="599000" />
       <workItem from="1678698158047" duration="599000" />
+      <workItem from="1678713566201" duration="4964000" />
+      <workItem from="1678784964668" duration="599000" />
+      <workItem from="1679157170083" duration="598000" />
+      <workItem from="1679160451942" duration="57000" />
     </task>
+    <task id="LOCAL-00001" summary="tables">
+      <created>1678713634704</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678713634704</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="tables" />
   </component>
 </project>

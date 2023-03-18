@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('get_devices/', views.get_devices, name='get_devices'),
+    path('get_models/', views.get_models, name='get_models'),
     path('get_facilities/', views.get_facilities, name='get_facilities'),
     path('get_facility_by_name/<str:facility_name>/', views.get_facility_by_name, name='get_facilities_by_name'),
     path('<str:qr>/get/', views.get_device, name='get_device'),

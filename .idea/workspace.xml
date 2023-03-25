@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e6d2c0ad-f17c-4028-923a-005f99594b2a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
@@ -48,7 +44,7 @@
       <window_info id="Space Code Reviews" order="0" />
       <window_info id="Bookmarks" order="1" side_tool="true" />
       <window_info id="Pull Requests" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.18261719" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.17226562" />
       <window_info id="Commit" order="4" />
       <window_info id="Learn" order="5" show_stripe_button="false" />
       <window_info id="Structure" order="6" side_tool="true" />
@@ -58,10 +54,11 @@
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Python Console" order="4" />
       <window_info anchor="bottom" id="Problems View" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.31007284" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.31035715" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="bottom" id="Services" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.2348301" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.13392857" />
+      <window_info anchor="bottom" id="Duplicates" order="10" weight="0.33035713" />
       <window_info anchor="bottom" id="Dependency Checker" order="10" />
       <window_info anchor="right" id="Endpoints" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
@@ -113,6 +110,11 @@
       <workItem from="1678784964668" duration="599000" />
       <workItem from="1679157170083" duration="598000" />
       <workItem from="1679160451942" duration="57000" />
+      <workItem from="1679160536541" duration="790000" />
+      <workItem from="1679172722640" duration="96000" />
+      <workItem from="1679172990800" duration="599000" />
+      <workItem from="1679424168959" duration="599000" />
+      <workItem from="1679737566875" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="tables">
       <created>1678713634704</created>
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678713634704</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tables">
+      <created>1679160727485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679160727485</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

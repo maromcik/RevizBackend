@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e6d2c0ad-f17c-4028-923a-005f99594b2a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviz/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reviz/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/audit/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,7 @@
       <window_info id="Space Code Reviews" order="0" />
       <window_info id="Bookmarks" order="1" side_tool="true" />
       <window_info id="Pull Requests" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.17226562" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.1381064" />
       <window_info id="Commit" order="4" />
       <window_info id="Learn" order="5" show_stripe_button="false" />
       <window_info id="Structure" order="6" side_tool="true" />
@@ -52,14 +55,14 @@
       <window_info anchor="bottom" id="Python Packages" order="1" />
       <window_info anchor="bottom" id="File Transfer" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="4" weight="0.32990056" />
       <window_info anchor="bottom" id="Problems View" order="5" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.31035715" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="bottom" id="Services" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.13392857" />
+      <window_info anchor="bottom" id="Services" order="8" weight="0.32990056" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.27912796" />
       <window_info anchor="bottom" id="Duplicates" order="10" weight="0.33035713" />
-      <window_info anchor="bottom" id="Dependency Checker" order="10" />
+      <window_info anchor="bottom" id="Dependency Checker" order="11" />
       <window_info anchor="right" id="Endpoints" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="SciView" order="2" />
@@ -114,7 +117,8 @@
       <workItem from="1679172722640" duration="96000" />
       <workItem from="1679172990800" duration="599000" />
       <workItem from="1679424168959" duration="599000" />
-      <workItem from="1679737566875" duration="598000" />
+      <workItem from="1679737566875" duration="634000" />
+      <workItem from="1679761986247" duration="2726000" />
     </task>
     <task id="LOCAL-00001" summary="tables">
       <created>1678713634704</created>
@@ -130,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679160727485</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tables">
+      <created>1679752156741</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679752156741</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

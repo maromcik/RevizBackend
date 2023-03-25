@@ -1,11 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django_unixdatetimefield import UnixDateTimeField
 
 
 class City(models.Model):
     id = models.AutoField(primary_key=True)
     city = models.CharField(max_length=255)
     zip_code = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return self.city
@@ -21,6 +23,7 @@ class Location(models.Model):
     id = models.AutoField(primary_key=True)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     address = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return self.city.city + " " + self.address
@@ -36,6 +39,7 @@ class Company(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     tag = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
@@ -53,6 +57,7 @@ class Branch(models.Model):
     branch = models.CharField(max_length=255)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     tag = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return self.company.name + " " + self.branch
@@ -68,6 +73,7 @@ class Room(models.Model):
     id = models.AutoField(primary_key=True)
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
     room = models.CharField(max_length=127)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return self.room
@@ -82,6 +88,7 @@ class Room(models.Model):
 class Year(models.Model):
     id = models.AutoField(primary_key=True)
     year = models.IntegerField(null=True, blank=True)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.year)
@@ -98,6 +105,7 @@ class Cord(models.Model):
     cord_type = models.CharField(max_length=255)
     length = models.DecimalField(max_digits=8, decimal_places=2)
     separable = models.BooleanField()
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return self.cord_type + " " + str(self.length) + " " + "m"
@@ -112,6 +120,7 @@ class Cord(models.Model):
 class Voltage(models.Model):
     id = models.AutoField(primary_key=True)
     value = models.IntegerField()
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.value)
@@ -127,6 +136,7 @@ class DeviceType(models.Model):
     id = models.AutoField(primary_key=True)
     type = models.CharField(max_length=255)
     tag = models.CharField(max_length=10)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.type)
@@ -140,7 +150,8 @@ class DeviceType(models.Model):
 
 class DeviceModeOfOperation(models.Model):
     id = models.AutoField(primary_key=True)
-    operation = models.CharField(max_length=255, default='prenosné', unique=True)
+    operation = models.CharField(max_length=255, unique=True)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.operation)
@@ -155,6 +166,7 @@ class DeviceModeOfOperation(models.Model):
 class DeviceManufacturer(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.name)
@@ -169,6 +181,7 @@ class DeviceManufacturer(models.Model):
 class DeviceCategory(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.name)
@@ -183,6 +196,7 @@ class DeviceCategory(models.Model):
 class DeviceUseGroup(models.Model):
     id = models.AutoField(primary_key=True)
     group = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.group)
@@ -197,6 +211,7 @@ class DeviceUseGroup(models.Model):
 class DeviceClass(models.Model):
     id = models.AutoField(primary_key=True)
     device_class = models.CharField(max_length=255)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.device_class)
@@ -240,7 +255,9 @@ class DeviceModel(models.Model):
     device_name = models.CharField(max_length=255)
     device_class = models.ForeignKey(DeviceClass, on_delete=models.CASCADE)
     use_group = models.ForeignKey(DeviceUseGroup, on_delete=models.CASCADE)
-    mode_of_operation = models.ForeignKey(DeviceModeOfOperation, on_delete=models.CASCADE, to_field='operation', default='prenosné')
+    # to_field='operation', default='prenosné'
+    mode_of_operation = models.ForeignKey(DeviceModeOfOperation, on_delete=models.CASCADE)
+    modified = UnixDateTimeField(auto_now=True)
 
     def __str__(self):
         return self.device_name
@@ -266,6 +283,7 @@ class Device(models.Model):
     year = models.ForeignKey(Year, on_delete=models.CASCADE, null=True, blank=True)
     qr_text = models.CharField(max_length=255)
     note = models.TextField(null=True, blank=True)
+    modified = UnixDateTimeField(auto_now=True)
 
     # display names
     def __str__(self):

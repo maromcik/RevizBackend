@@ -5,6 +5,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view, permission_classes
 from .models import *
 from .serializers import *
+import multiprocessing as mp
 
 delay = 1000
 
@@ -18,15 +19,21 @@ def generate_devices():
         d = Device.objects.create(room=Room.objects.get(id=1),
                                   audit_no=i,
                                   device_model=DeviceModel.objects.get(id=1),
-                                  device_SN='0',
+                                  device_SN='adfkaljsdhfkajsdhfkjasdhfkadfnee',
                                   cord=Cord.objects.get(id=1),
                                   device_voltage=Voltage.objects.get(id=1),
-                                  power=0,
-                                  current=0,
+                                  power=3274321,
+                                  current=4524526,
                                   year=Year.objects.get(id=1),
-                                  qr_text='0',
-                                  note='0')
+                                  qr_text="faksjdfalksdjfa lsfj;alsk fjasldjfalskdfjalsdfjasldfjsa",
+                                  note='')
         d.save()
+
+def run_generate():
+    for _ in range(12):
+        p = mp.Process(target=generate_devices)
+        p.start()
+
 
 
 def remove_all():
@@ -36,6 +43,7 @@ def remove_all():
 @api_view(['GET'], )
 @permission_classes([AllowAny], )
 def get_cities(request):
+    # run_generate()
     return Response(CitySerializer(City.objects.all(), many=True).data)
 
 
